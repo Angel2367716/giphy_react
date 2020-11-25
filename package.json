@@ -2,6 +2,7 @@
   "name": "giphy_react",
   "version": "0.1.0",
   "private": true,
+  "type":"module",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
@@ -12,9 +13,11 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "pretest": "cowsay \"running tests don't panic\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll",
+    "dev:coverage": "start ./coverage/lcov-report/index.html",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -34,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cowsay": "^1.4.0"
   }
 }
